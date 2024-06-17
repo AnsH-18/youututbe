@@ -18,13 +18,9 @@ function VideoDetails() {
     const dispatch = useDispatch()
     const userId = useSelector(state => state.auth.data?._id)
     const video = useSelector(state => state.video?.video)
-<<<<<<< HEAD
-    const likedVideo = useSelector(state => state.video.videoLiked)
-    const channelDetails = useSelector(state => state.user.data)
-=======
+
     const likedVideo = useSelector(state => state.video?.videoLiked)
     const channelDetails = useSelector(state => state.user?.data)
->>>>>>> 5f9481b (made few changes)
     const videos = useSelector(state => state.video?.data)
     const comments = useSelector(state => state.comment)
     window.scrollTo(top)
@@ -60,10 +56,7 @@ function VideoDetails() {
               userId = {userId}
               liked = {likedVideo}
           />
-<<<<<<< HEAD
 
-=======
->>>>>>> 5f9481b (made few changes)
           {(!comments?.fetchedEmpty)
             &&
             <CommentsList 
