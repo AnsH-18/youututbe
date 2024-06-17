@@ -2,12 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     data: [],
-<<<<<<< HEAD
-    empty: true
-=======
     empty: true,
     status: null
->>>>>>> 5f9481b (made few changes)
 }
 
 const getChannelSubscribers = createAsyncThunk(
@@ -30,8 +26,7 @@ const getChannelSubscribers = createAsyncThunk(
     }
 )
 
-<<<<<<< HEAD
-=======
+
 const toggleSubscription = createAsyncThunk(
     "subscriber/toggleSubscription",
     async (channelId) => {
@@ -48,7 +43,7 @@ const toggleSubscription = createAsyncThunk(
     }
 )
 
->>>>>>> 5f9481b (made few changes)
+
 
 const subscribersSlice = createSlice({
     name: "subscriber",
@@ -59,19 +54,15 @@ const subscribersSlice = createSlice({
             state.data = action.payload
             state.empty = action.payload.length === 0 ? true : false
         })
-<<<<<<< HEAD
-=======
+
         .addCase(toggleSubscription.fulfilled, (state, action) => {
 
         })
->>>>>>> 5f9481b (made few changes)
+
     }
 })
 
 
-<<<<<<< HEAD
-export {getChannelSubscribers}
-=======
+
 export {getChannelSubscribers, toggleSubscription}
->>>>>>> 5f9481b (made few changes)
 export default subscribersSlice.reducer
